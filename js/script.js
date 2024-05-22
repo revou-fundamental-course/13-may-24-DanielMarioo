@@ -1,16 +1,16 @@
-let isKelilingVisible = false; 
-function HideOrShow(){
-    if (isKelilingVisible == false){
+let isKelilingVisible = false;
+function HideOrShow() {
+    if (isKelilingVisible == false) {
         isKelilingVisible = true;
-        document.getElementById("luas-segitiga").style.display= 'none';
-        document.getElementById("keliling-segitiga").style.display= 'block';
+        document.getElementById("luas-segitiga").style.display = 'none';
+        document.getElementById("keliling-segitiga").style.display = 'block';
     } else {
         isKelilingVisible = false;
-        document.getElementById("luas-segitiga").style.display= 'block';
-        document.getElementById("keliling-segitiga").style.display= 'none';
-     
+        document.getElementById("luas-segitiga").style.display = 'block';
+        document.getElementById("keliling-segitiga").style.display = 'none';
+
     }
-    
+
 }
 
 function hitung_luas() {
