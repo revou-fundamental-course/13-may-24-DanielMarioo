@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+
 </head>
 
 <body>
@@ -44,20 +46,21 @@
         <form action="">
             <section>
                 <div>
-                    <label for="">ALAS</label>
-                    <input type="text" class="input">
+                    <label for="alas">ALAS</label>
+                    <input type="number" class="input" id="alas" name="alas" placeholder="Masukkan Alas Segitiga">
                 </div><br>
                 <div>
-                    <label for="">TINGGI</label>
-                    <input type="text" class="input">
+                    <label for="tinggi">TINGGI</label>
+                    <input type="number" class="input" id="tinggi" name="tinggi" placeholder="Masukkan Tinggi Segitiga">
                 </div>
             </section>
-
-            <p>Diketahui : </p>
-
         </form>
-        <button class="hitung-luas"><b>HITUNG</b></button>
-        <button class="reset-luas"><b>RESET</b></button>
+
+        <p>Diketahui : </p>
+        <div id="hasil-luas"></div>
+
+        <button class="hitung-luas" onclick="hitung_luas()"><b>HITUNG</b></button>
+        <button class="reset-luas" onclick="reset_luas()"><b>RESET</b></button>
     </section><br>
     <hr class="garis1">
 
@@ -67,7 +70,7 @@
                 <h2 id="keliling">KELILING SEGITIGA</h2>
             </div>
         </section>
-
+        
         <div class="img-formula">
             <img src="assets/keliling.png" alt="">
             <p>Rumus Keliling Segitiga</p>
@@ -84,23 +87,25 @@
             <section>
                 <div>
                     <label for="">SISI 1</label>
-                    <input type="text" class="input">
+                    <input type="text" class="input" id="sisi1" name="sisi1" placeholder="Masukkan sisi 1">
                 </div><br>
                 <div>
                     <label for="">SISI 2</label>
-                    <input type="text" class="input">
+                    <input type="text" class="input" id="sisi2" name="sisi2" placeholder="Masukkan sisi 2">
                 </div><br>
                 <div>
                     <label for="">SISI 3</label>
-                    <input type="text" class="input">
+                    <input type="text" class="input" id="sisi3" name="sisi3" placeholder="Masukkan sisi 3">
                 </div>
             </section>
 
             <p>Diketahui : </p>
+            <div id="hasil-keliling">
 
+            </div>
         </form>
-        <button class="hitung-keliling"><b>HITUNG</b></button>
-        <button class="reset-keliling"><b>RESET</b></button>
+        <button class="hitung-keliling" onclick="hitung_keliling()"><b>HITUNG</b></button>
+        <button class="reset-keliling" onclick="reset_keliling()"><b>RESET</b></button>
     </section>
 </body>
 
