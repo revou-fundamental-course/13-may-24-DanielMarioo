@@ -53,7 +53,7 @@ function hitung_keliling() {
         sisi2Segitiga = parseFloat(sisi2Segitiga);
         sisi3Segitiga = parseFloat(sisi3Segitiga);
 
-        let keliling = sisi1Segitiga * sisi2Segitiga * sisi3Segitiga;
+        let keliling = sisi1Segitiga + sisi2Segitiga + sisi3Segitiga;
 
         let resultDiv = document.getElementById('hasil-keliling');
         resultDiv.innerHTML = `
@@ -61,7 +61,7 @@ function hitung_keliling() {
             <p>Sisi 1 = ${sisi1Segitiga}</p>
             <p>Sisi 2 = ${sisi2Segitiga}</p>
             <p>Sisi 3 = ${sisi3Segitiga}</p>
-            <p>Keliling = ${sisi1Segitiga} * ${sisi2Segitiga} * ${sisi3Segitiga}</p>
+            <p>Keliling = ${sisi1Segitiga} + ${sisi2Segitiga} + ${sisi3Segitiga}</p>
             <p>Jawaban: </p>
             <p>Keliling= ${keliling}</p>
         `;
