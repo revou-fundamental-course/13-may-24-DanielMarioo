@@ -1,3 +1,18 @@
+let isKelilingVisible = false; 
+function HideOrShow(){
+    if (isKelilingVisible == false){
+        isKelilingVisible = true;
+        document.getElementById("luas-segitiga").style.display= 'none';
+        document.getElementById("keliling-segitiga").style.display= 'block';
+    } else {
+        isKelilingVisible = false;
+        document.getElementById("luas-segitiga").style.display= 'block';
+        document.getElementById("keliling-segitiga").style.display= 'none';
+     
+    }
+    
+}
+
 function hitung_luas() {
     let alasSegitiga = document.getElementById('alas').value;
     let tinggiSegitiga = document.getElementById('tinggi').value;
@@ -10,9 +25,11 @@ function hitung_luas() {
 
         let resultDiv = document.getElementById('hasil-luas');
         resultDiv.innerHTML = `
+            <p>Diketahui : </p>
             <p>Alas = ${alasSegitiga}</p>
             <p>Tinggi = ${tinggiSegitiga}</p>
             <p>Luas = 1/2 * ${alasSegitiga} * ${tinggiSegitiga}</p>
+            <p>Jawaban: </p>
             <p>Luas = ${luas}</p>
         `;
     } else {
@@ -40,10 +57,12 @@ function hitung_keliling() {
 
         let resultDiv = document.getElementById('hasil-keliling');
         resultDiv.innerHTML = `
+            <p>Diketahui : </p>
             <p>Sisi 1 = ${sisi1Segitiga}</p>
             <p>Sisi 2 = ${sisi2Segitiga}</p>
             <p>Sisi 3 = ${sisi3Segitiga}</p>
             <p>Keliling = ${sisi1Segitiga} * ${sisi2Segitiga} * ${sisi3Segitiga}</p>
+            <p>Jawaban: </p>
             <p>Keliling= ${keliling}</p>
         `;
     } else {

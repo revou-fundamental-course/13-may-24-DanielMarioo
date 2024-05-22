@@ -19,12 +19,12 @@
 
     <section>
         <a href="#keliling">
-            <button class="switch-keliling"> <b>MENUJU KE KELILING SEGITIGA </b></button>
+            <button class="switch-keliling" onclick="HideOrShow()"> <b>MENUJU KE KELILING SEGITIGA </b></button>
         </a>
     </section>
     <hr class="garis1">
 
-    <section>
+    <section id="luas-segitiga">
         <section>
             <div class="section-content">
                 <h2>LUAS SEGITIGA</h2>
@@ -36,38 +36,36 @@
             <p>Rumus Luas Segitiga</p>
             <h3>Luas = 1/2 * alas * tinggi</h3>
         </div>
+        <hr class="garis2">
+        <section>
+            <header>
+                <h1>HITUNG LUAS SEGITIGA</h1>
+            </header>
+            <form action="">
+                <section>
+                    <div>
+                        <label for="alas">ALAS</label>
+                        <input type="number" class="input" id="alas" name="alas" placeholder="Masukkan Alas Segitiga">
+                    </div><br>
+                    <div>
+                        <label for="tinggi">TINGGI</label>
+                        <input type="number" class="input" id="tinggi" name="tinggi" placeholder="Masukkan Tinggi Segitiga">
+                    </div>
+                </section>
+            </form>
+    
+            <div id="hasil-luas"></div>
+            <br>
+            <button class="hitung-luas" onclick="hitung_luas()"><b>HITUNG</b></button>
+            <button class="reset-luas" onclick="reset_luas()"><b>RESET</b></button>
+        </section><br>
     </section>
-    <hr class="garis2">
 
-    <section>
-        <header>
-            <h1>HITUNG LUAS SEGITIGA</h1>
-        </header>
-        <form action="">
-            <section>
-                <div>
-                    <label for="alas">ALAS</label>
-                    <input type="number" class="input" id="alas" name="alas" placeholder="Masukkan Alas Segitiga">
-                </div><br>
-                <div>
-                    <label for="tinggi">TINGGI</label>
-                    <input type="number" class="input" id="tinggi" name="tinggi" placeholder="Masukkan Tinggi Segitiga">
-                </div>
-            </section>
-        </form>
 
-        <p>Diketahui : </p>
-        <div id="hasil-luas"></div>
-
-        <button class="hitung-luas" onclick="hitung_luas()"><b>HITUNG</b></button>
-        <button class="reset-luas" onclick="reset_luas()"><b>RESET</b></button>
-    </section><br>
-    <hr class="garis1">
-
-    <section>
+    <section id="keliling-segitiga">
         <section>
             <div class="section-content">
-                <h2 id="keliling">KELILING SEGITIGA</h2>
+                <h2>KELILING SEGITIGA</h2>
             </div>
         </section>
         
@@ -76,9 +74,7 @@
             <p>Rumus Keliling Segitiga</p>
             <h3>Luas = Sisi 1 + Sisi 2 + Sisi 3</h3>
         </div>
-    </section>
     <hr class="garis2">
-
     <section>
         <header>
             <h1>HITUNG KELILING SEGITIGA</h1>
@@ -99,14 +95,16 @@
                 </div>
             </section>
 
-            <p>Diketahui : </p>
             <div id="hasil-keliling">
 
             </div>
-        </form>
+        </form><br>
         <button class="hitung-keliling" onclick="hitung_keliling()"><b>HITUNG</b></button>
         <button class="reset-keliling" onclick="reset_keliling()"><b>RESET</b></button>
     </section>
+    </section>
+
+
 </body>
 
 </html>
